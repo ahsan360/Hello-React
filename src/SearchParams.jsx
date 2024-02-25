@@ -47,6 +47,7 @@ const SearchParams = () => {
         <button>Submit</button>
       </form>
       <Result pets = {pets} />
+      <h1>Ahsan</h1>
     </div>
   );
 };
