@@ -1,16 +1,15 @@
 import Pet from "./Pet";
 const Result = (props) => {
-  const {pets} = props
+  const { pets } = props;
+  console.log(pets)
   return (
     <div className="search">
-       {
-        console.log(pets)
-      }
       {!pets.length ? (
         <h1>Pets Not found</h1>
       ) : (
         pets.map((pet) => (
           <Pet
+            id={pet.id}
             name={pet.name}
             animal={pet.animal}
             breed={pet.breed}

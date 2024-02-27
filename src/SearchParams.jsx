@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Result from "./Result"
+import Result from "./Result";
 
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
 
@@ -46,8 +46,7 @@ const SearchParams = () => {
         </label>
         <button>Submit</button>
       </form>
-      <Result pets = {pets} />
-      <h1>Ahsan</h1>
+      <Result pets={pets} />
     </div>
   );
 };
