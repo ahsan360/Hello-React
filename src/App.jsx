@@ -1,8 +1,8 @@
 import { createRoot } from "react-dom/client";
 import Pet from "./Pet";
 import SearchParams from "./SearchParams";
-import {  Link, Route, Routes } from "react-router-dom";
-import { HashRouter as BrowserRouter } from 'react-router-dom';
+import { Link, Route, Routes } from "react-router-dom";
+import { HashRouter as BrowserRouter } from "react-router-dom";
 
 import Details from "./Details";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";

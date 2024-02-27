@@ -1,7 +1,6 @@
 import Pet from "./Pet";
 const Result = (props) => {
   const { pets } = props;
-  console.log(pets)
   return (
     <div className="search">
       {!pets.length ? (
