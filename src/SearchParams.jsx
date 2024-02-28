@@ -15,11 +15,9 @@ const SearchParams = () => {
   const [location, updateLocation] = useState("");
 
   const [breeds, updateBreed] = useBreedList(animal);
-  console.log("breeds:", breeds);
   const results = useQuery(["search", requestParams], fetchPets);
 
   const pets = results?.data?.pets ?? [];
-  console.log("pets:", pets);
   return (
     <div className="search-params">
       <form
@@ -27,9 +25,9 @@ const SearchParams = () => {
           e.preventDefault();
           const formData = new FormData(e.target);
           const obj = {
+            location: formData.get("location") ?? "",
             animal: formData.get("animal") ?? "",
             breed: formData.get("breed") ?? "",
-            location: formData.get("location") ?? "",
           };
           setRequestParam(obj);
 
@@ -51,6 +49,7 @@ const SearchParams = () => {
           Animal
           <select
             id="animal"
+            name="animal"
             value={animal}
             onChange={(e) => {
               updateAnimal(e.target.value);
