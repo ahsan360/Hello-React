@@ -1,5 +1,7 @@
 import { createRoot } from "react-dom/client";
 import Pet from "./Pet";
+import { useContext, useState } from "react";
+import AdoptedPetContext from "./AdoptedPetContext";
 import SearchParams from "./SearchParams";
 import { Link, Route, Routes } from "react-router-dom";
 import { HashRouter as BrowserRouter } from "react-router-dom";
@@ -17,16 +19,19 @@ const queryClient = new QueryClient({
 });
 
 const App = () => {
+  const adopetedPet = useState(null);
   return (
     <BrowserRouter>
       <QueryClientProvider client={queryClient}>
-        <header>
-          <Link to="/">Adopt Me</Link>
-        </header>
-        <Routes>
-          <Route path="/details/:id" element={<Details />} />
-          <Route path="/" element={<SearchParams />} />
-        </Routes>
+        <AdoptedPetContext.Provider value={adopetedPet}>
+          <header>
+            <Link to="/">Adopt Me</Link>
+          </header>
+          <Routes>
+            <Route path="/details/:id" element={<Details />} />
+            <Route path="/" element={<SearchParams />} />
+          </Routes>
+        </AdoptedPetContext.Provider>
       </QueryClientProvider>
     </BrowserRouter>
   );
