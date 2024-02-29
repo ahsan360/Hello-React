@@ -46,6 +46,7 @@ const Details = () => {
           ) : null}
         </h2>
       </div>
+      <h1>Ahsan</h1>
     </div>
   );
 };
