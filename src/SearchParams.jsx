@@ -32,20 +32,13 @@ const SearchParams = () => {
             breed: formData.get("breed") ?? "",
           };
           setRequestParam(obj);
-
-          {
-            //console.log(obj)
-          }
         }}
       >
-        {
-          adopetedPet ? (
-            <div className="pet image-container">
-              <img src={adopetedPet.images[0]} alt="" />
-            </div>
-
-          ):null
-        }
+        {adopetedPet ? (
+          <div className="pet image-container">
+            <img src={adopetedPet.images[0]} alt="" />
+          </div>
+        ) : null}
         <label htmlFor="location">
           Location
           <input
