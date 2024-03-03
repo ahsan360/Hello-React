@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
+  "scripts": { 
+      "start": "node your_entry_file.js",
+     
+      "clean": "clean",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
